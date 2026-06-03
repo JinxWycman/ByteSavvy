@@ -332,7 +332,7 @@
           <div class="col-md-4">
             <div class="overflow-hidden rounded shadow">
               <img
-                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80"
+                src="public/images/portfolio-1.jpg"
                 alt="E-commerce website mockup"
                 class="w-100 portfolio-img"
                 loading="lazy"
@@ -342,7 +342,7 @@
           <div class="col-md-4">
             <div class="overflow-hidden rounded shadow">
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+                src="public/images/portfolio-2.jpg"
                 alt="Portfolio website mockup"
                 class="w-100 portfolio-img"
                 loading="lazy"
@@ -352,7 +352,7 @@
           <div class="col-md-4">
             <div class="overflow-hidden rounded shadow">
               <img
-                src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?w=800&q=80"
+                src="public/images/portfolio-3.jpg"
                 alt="Business landing page mockup"
                 class="w-100 portfolio-img"
                 loading="lazy"
@@ -362,7 +362,7 @@
           <div class="col-md-4">
             <div class="overflow-hidden rounded shadow">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+                src="public/images/portfolio-4.jpg"
                 alt="Modern website design mockup"
                 class="w-100 portfolio-img"
                 loading="lazy"
@@ -372,7 +372,7 @@
           <div class="col-md-4">
             <div class="overflow-hidden rounded shadow">
               <img
-                src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80"
+                src="public/images/portfolio-5.jpg"
                 alt="Responsive website mockup"
                 class="w-100 portfolio-img"
                 loading="lazy"
@@ -382,7 +382,7 @@
           <div class="col-md-4">
             <div class="overflow-hidden rounded shadow">
               <img
-                src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80"
+                src="public/images/portfolio-6.jpg"
                 alt="Website browser mockup"
                 class="w-100 portfolio-img"
                 loading="lazy"
@@ -591,26 +591,28 @@
       };
 
       // Handle form submission with redirect
-      document.querySelector('form').addEventListener('submit', function(e) {
+      document.querySelector("form").addEventListener("submit", function (e) {
         e.preventDefault();
         const form = this;
         const formData = new FormData(form);
-        
+
         fetch(form.action, {
-          method: 'POST',
+          method: "POST",
           body: formData,
           headers: {
-            'Accept': 'application/json'
-          }
-        }).then(response => {
-          if (response.ok) {
-            window.location.href = 'thank-you.html';
-          } else {
-            alert('Oops! There was a problem submitting your form');
-          }
-        }).catch(error => {
-          alert('Oops! There was a problem submitting your form');
-        });
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              window.location.href = "thank-you.html";
+            } else {
+              alert("Oops! There was a problem submitting your form");
+            }
+          })
+          .catch((error) => {
+            alert("Oops! There was a problem submitting your form");
+          });
       });
     </script>
   </body>
